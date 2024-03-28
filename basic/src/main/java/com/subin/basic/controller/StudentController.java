@@ -9,13 +9,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.subin.basic.dto.request.student.PatchStudentRequestDto;
 import com.subin.basic.dto.request.student.PostStudentRequestDto;
 import com.subin.basic.service.StudentService;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-
-// 데이터 베이스에서 테이블은 클래스하고 맵핑됨
 
 @RestController
 @RequestMapping("/student")
@@ -35,16 +34,20 @@ public class StudentController {
 
     // UPDATE
     @PatchMapping("/")
-    public ResponseEntity<?> patchStudent() {
-        return null;
+    public ResponseEntity<String> patchStudent(
+        @RequestBody @Valid PatchStudentRequestDto requestBody
+    ) {
+        ResponseEntity<String> response = studentService.patchStudent(requestBody);
+        return response;
     }
 
     // DELETE
     @DeleteMapping("/{studentNumber}")
-    public ResponseEntity<?> deleteStudent(
+    public ResponseEntity<String> deleteStudent(
         @PathVariable("studentNumber") Integer studentNumber
     ) {
-        return null;
+        ResponseEntity<String> response = studentService.deleteStudent(studentNumber);
+        return response;
     }
     
 }

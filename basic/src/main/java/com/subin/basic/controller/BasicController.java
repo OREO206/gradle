@@ -60,7 +60,7 @@ public class BasicController {
     // HTTP GET localhost:4000/main/
     @RequestMapping(value = "/", method = {RequestMethod.GET})
     public String getHello() {
-        return "Hello Springboot!!";
+        return service.getHello();
     }
 
     // HTTP GET Method: 클라이언트가 서버로부터 데이터를 받기를 원할 때 사용하는 메서드
@@ -68,7 +68,7 @@ public class BasicController {
     // @GetMapping(): RequestMapping 기능을 GET Mathod에 한정시킨 것 (가독성 + 안정성)
     @GetMapping("/apple")
     public String getApple() {
-        return "Get Mapping으로 만든 메서드";
+        return service.getApple();
     }
 
     // HTTP POST Mehotd: 클라이언트가 서버에 데이터를 작성하기 원할 때 사용하는 메서드
