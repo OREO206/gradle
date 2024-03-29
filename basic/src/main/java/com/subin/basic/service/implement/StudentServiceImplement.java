@@ -61,5 +61,11 @@ public class StudentServiceImplement implements StudentService {
         
         return ResponseEntity.status(HttpStatus.OK).body("성공");
     }
+
+// CRUD
+// CREATE: 1~2
+// READ: 엄청 많음
+// UPDATE: 1 ~ 컬럼 개수
+// DELETE: 1 ~ 2
     
 }
