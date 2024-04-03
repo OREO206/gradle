@@ -11,7 +11,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity(name = "search")
 @Table(name = "search")
-public class SearchLongEntity {
+public class SearchLogEntity {
     private Integer logSequence;
     private String searchWord;
     private String relationWord;    

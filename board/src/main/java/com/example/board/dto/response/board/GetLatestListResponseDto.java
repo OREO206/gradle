@@ -7,13 +7,13 @@ import org.springframework.http.ResponseEntity;
 
 import com.example.board.dto.response.ResponseCode;
 import com.example.board.dto.response.ResponseMessage;
-import com.example.board.dto.response.ResponstDto;
+import com.example.board.dto.response.ResponseDto;
 import com.example.board.dto.response.board.item.BoardListItem;
 
 import lombok.Getter;
 
 @Getter
-public class GetLatestListResponseDto extends ResponstDto{
+public class GetLatestListResponseDto extends ResponseDto{
     private List<BoardListItem> latesList;
 
     public GetLatestListResponseDto(List<BoardListItem> latestList) {
