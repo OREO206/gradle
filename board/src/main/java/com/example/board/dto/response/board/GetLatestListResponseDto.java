@@ -16,7 +16,7 @@ import lombok.Getter;
 public class GetLatestListResponseDto extends ResponstDto{
     private List<BoardListItem> latesList;
 
-    private GetLatestListResponseDto(List<BoardListItem> latestList) {
+    public GetLatestListResponseDto(List<BoardListItem> latestList) {
         super(ResponseCode.SUCCESS, ResponseMessage.SUCCESS);
         this.latesList = latestList;
     }

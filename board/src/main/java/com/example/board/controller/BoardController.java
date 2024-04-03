@@ -16,9 +16,10 @@ import lombok.RequiredArgsConstructor;
 public class BoardController {
 
     private final BoardService boardService;
-
+    
     @GetMapping("/latest-list")
     public ResponseEntity<? super GetLatestListResponseDto> getLatestList() {
         return null;
     }
+
 }

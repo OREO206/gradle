@@ -13,8 +13,8 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-@Entity(name = "favorit")
-@Table(name = "favorit")
+@Entity(name="favorite")
+@Table(name="favorite")
 @IdClass(FavoritePk.class)
 public class FavoriteEntity {
     @Id
