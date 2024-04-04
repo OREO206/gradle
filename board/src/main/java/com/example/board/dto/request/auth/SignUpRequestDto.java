@@ -4,16 +4,16 @@ import org.hibernate.validator.constraints.Length;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
+@NoArgsConstructor
 public class SignUpRequestDto {
     @NotBlank
-    @Pattern(regexp = "^[a-zA-Z0-9]*@([-.]?[a-zA-Z0-9]*\\.[a-zA-Z]{2,4}$")
+    @Pattern(regexp="^[a-zA-Z0-9]*@([-.]?[a-zA-Z0-9])*\\.[a-zA-Z]{2,4}$")
     private String email;
 
     @NotBlank
@@ -24,13 +24,11 @@ public class SignUpRequestDto {
     private String nickname;
 
     @NotBlank
-    @Pattern(regexp = "^[0-9]{10,12}$")
+    @Pattern(regexp="^[0-9]{10,12}$")
     private String telNumber;
 
     @NotBlank
     private String address;
 
-    @NotBlank
     private String addressDetail;
-
 }

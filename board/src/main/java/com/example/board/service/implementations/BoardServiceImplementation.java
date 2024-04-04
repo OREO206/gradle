@@ -3,13 +3,10 @@ package com.example.board.service.implementations;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.example.board.dto.response.ResponseCode;
 import com.example.board.dto.response.ResponseDto;
-import com.example.board.dto.response.ResponseMessage;
 import com.example.board.dto.response.board.GetLatestListResponseDto;
 import com.example.board.dto.response.board.item.BoardListItem;
 import com.example.board.repository.BoardRepository;
