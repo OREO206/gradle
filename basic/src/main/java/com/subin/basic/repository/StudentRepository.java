@@ -85,6 +85,11 @@ extends JpaRepository<StudentEntity, Integer> {
     )
     List<StudentEntity> getStudent3(@Param("student_number") Integer studentNumber, @Param("age") Integer age
     );
+
+    StudentEntity findByStudentNumber(Integer studentNumber);
+
 } 
+
+
 
 // int는 함수의 반환 데이터 타입을 말하니까 int인거고 () 안에서는 객체를 선언해서 매개변수로 적는거라 대문자 쓰는 거 아님?
